@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt bàn của tôi</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="booking-header">
+        <h1>Restaurant Booking</h1>
+        <p>Quản lý thông tin đặt bàn của bạn</p>
+    </header>
+
+    <main class="my-reservation-container">
+
+        <div class="my-reservation-title">
+            <h2>ĐẶT BÀN CỦA TÔI</h2>
+            <p>Nhập thông tin để tra cứu đặt bàn</p>
+        </div>
+
+        <!-- Form tra cuu -->
+        <form id="search-reservation">
+
+            <div class="form-group">
+                <label for="search-code">Mã đặt bàn</label>
+                <input type="text" id="search-code"
+                    placeholder="Nhập mã đặt bàn" required>
+            </div>
+
+            <div class="form-group">
+                <label for="search-phone">Số điện thoại</label>
+                <input type="tel" id="search-phone"
+                    placeholder="Nhập số điện thoại" required>
+            </div>
+
+            <button type="submit" class="search-btn">
+                TRA CỨU
+            </button>
+
+        </form>
+
+        <!-- Thong tin dat ban -->
+        <div id="reservation-result" class="reservation-result">
+
+            <h3>Thông tin đặt bàn</h3>
+
+            <p>Mã đặt bàn: <span id="my-code"></span></p>
+            <p>Họ và tên: <span id="my-name"></span></p>
+            <p>Số điện thoại: <span id="my-phone"></span></p>
+            <p>Email: <span id="my-email"></span></p>
+            <p>Bàn đã chọn: <span id="my-table"></span></p>
+            <p>Trạng thái: <span id="my-status">Đã xác nhận</span></p>
+
+            <div class="reservation-actions">
+                <button type="button" id="change-btn">
+                    THAY ĐỔI ĐẶT BÀN
+                </button>
+
+                <button type="button" id="cancel-btn">
+                    HỦY ĐẶT BÀN
+                </button>
+            </div>
+
+        </div>
+
+        <p id="search-message"></p>
+
+        <p class="reservation-note">
+            Lưu ý: Chỉ có thể thay đổi hoặc hủy đặt bàn
+            trước giờ hẹn ít nhất 60 phút.
+        </p>
+
+    </main>
+
+    <script src="../js/booking.js"></script>
+
+</body>
+</html>
