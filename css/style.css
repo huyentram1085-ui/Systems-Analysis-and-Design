@@ -1,0 +1,1400 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Cai dat chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F1EEE5;
+    color: #333333;
+}
+
+/* Phan dau trang */
+header {
+    background-color: #244536;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Noi dung chinh */
+.welcome {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.welcome h2 {
+    color: #244536;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    margin-bottom: 30px;
+}
+
+/* Nut dat ban */
+.btn {
+    display: inline-block;
+    background-color: #244536;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    background-color: #365C49;
+}
+
+
+/* Giao dien UI-01: Booking Screen */
+
+.booking-header {
+    background-color: #244536;
+    color: #FAFAF7;
+    padding: 25px;
+    text-align: center;
+}
+
+.booking-header h1 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 8px;
+}
+
+.booking-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FAFAF7;
+    border-radius: 12px;
+}
+
+.booking-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-title h2 {
+    color: #244536;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.booking-title p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 46px;
+    padding: 0 12px;
+    border: 1px solid #E5E0D6;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    font-size: 14px;
+}
+
+.search-btn {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #244536;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background-color: #365C49;
+}
+
+
+.search-btn:hover {
+    background-color: #365C49;
+}
+
+/* Hien thi tren dien thoai */
+
+@media (max-width: 600px) {
+    .booking-container {
+        margin: 25px 16px;
+        padding: 22px 16px;
+    }
+
+    .booking-title h2 {
+        font-size: 20px;
+    }
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+
+/* Giao dien UI-02: Table Map */
+
+.map-container {
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 40px auto;
+    padding: 35px 45px;
+    background-color: #FAFAF7;
+    border-radius: 12px;
+}
+
+.map-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.map-title h2 {
+    color: #244536;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.map-title p {
+    color: #666666;
+    font-size: 14px;
+}
+
+/* Chu thich mau sac */
+.table-legend {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+.table-legend span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.table-legend i {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.green { background-color: #2E9D58; }
+.yellow { background-color: #EABF32; }
+.red { background-color: #D94343; }
+
+/* Cac ban */
+.table-list {
+    width: 100%;
+    min-height: 400px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    justify-items: center;
+    align-items: center;
+
+    column-gap: 30px;
+    row-gap: 25px;
+    padding: 25px 60px;
+}
+
+.table {
+    width: 100px;
+    height: 72px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    border-radius: 10px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.table small {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.available { background-color: #2E9D58; }
+.reserved {
+    background-color: #EABF32;
+    cursor: not-allowed;
+}
+.occupied {
+    background-color: #D94343;
+    cursor: not-allowed;
+}
+
+.table.selected {
+    outline: 3px solid #244536;
+    outline-offset: 3px;
+}
+
+/* Thong tin ban */
+.selected-table {
+    margin-top: 35px;
+    padding: 20px;
+    background-color: #F1EEE5;
+    border-radius: 10px;
+}
+
+.selected-table h3 {
+    color: #244536;
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+}
+
+.selected-table p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+#continue-btn {
+    width: 100%;
+    height: 54px;
+    margin-top: 22px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #244536;
+    color: #FFFFFF;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(36, 69, 54, 0.18);
+    transition: all 0.2s ease;
+}
+
+#continue-btn:hover {
+    background: #355E49;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(36, 69, 54, 0.25);
+}
+
+#continue-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+#continue-btn:disabled {
+    background: #A9B2AC;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .map-container {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+        padding: 20px 16px;
+    }
+
+    .table-list {
+        min-height: 320px;
+        padding: 20px 5px;
+        gap: 15px;
+    }
+
+    .table {
+        width: 72px;
+        height: 54px;
+    }
+}
+
+
+/* Giao dien UI-03: Reservation Form */
+
+.reservation-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FAFAF7;
+    border-radius: 12px;
+}
+
+.reservation-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.reservation-title h2 {
+    color: #244536;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.reservation-title p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.table-detail {
+    background-color: #F1EEE5;
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.table-detail h3 {
+    color: #244536;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.table-detail p {
+    font-size: 14px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E5E0D6;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+    .reservation-container {
+        margin: 25px 16px;
+        padding: 22px 16px;
+    }
+}
+
+
+/* Giao dien UI-04: Confirmation */
+
+.confirmation-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FAFAF7;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    background-color: #2E9D58;
+    color: white;
+    border-radius: 50%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-title h2 {
+    color: #244536;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.confirmation-title p {
+    font-size: 14px;
+    color: #666666;
+}
+
+.qr-section {
+    margin: 25px 0;
+    padding: 20px;
+    background-color: #F1EEE5;
+    border-radius: 10px;
+}
+
+.qr-section h3,
+.confirmation-info h3 {
+    color: #244536;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.qr-section img {
+    width: 170px;
+    height: 170px;
+    margin: 10px auto;
+    display: block;
+}
+
+.qr-section p {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.confirmation-info {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #E5E0D6;
+    border-radius: 10px;
+}
+
+.confirmation-info p {
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.confirmation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.confirmation-buttons .search-btn {
+    text-decoration: none;
+}
+
+.home-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border: 1px solid #244536;
+    border-radius: 8px;
+    color: #244536;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .confirmation-container {
+        margin: 25px 16px;
+        padding: 22px 16px;
+    }
+}
+
+
+/* Giao dien UI-05: My Reservation */
+
+.my-reservation-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FAFAF7;
+    border-radius: 12px;
+}
+
+.my-reservation-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.my-reservation-title h2 {
+    color: #244536;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.my-reservation-title p {
+    color: #666666;
+    font-size: 14px;
+}
+
+.reservation-result {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #F1EEE5;
+    border-radius: 10px;
+}
+
+.reservation-result h3 {
+    color: #244536;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.reservation-result p {
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.reservation-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.reservation-actions button {
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background-color: #244536;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reservation-actions button:last-child {
+    background-color: #D94343;
+}
+
+.reservation-note {
+    margin-top: 20px;
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+#search-message {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .my-reservation-container {
+        margin: 25px 16px;
+        padding: 22px 16px;
+    }
+}
+
+#search-reservation label {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#search-reservation button {
+    margin-top: 12px;
+}
+
+.reservation-container .form-group label {
+    position: relative;
+    top: 5px;
+}
+
+
+
+/* UI-06: Staff Booking Management */
+
+.management-container {
+    width: calc(100% - 40px);
+    max-width: 305px;
+    margin: 25px auto;
+    padding: 25px 13px 16px;
+    box-sizing: border-box;
+    background: #F1EEE5;
+}
+
+/* Header */
+
+.management-header {
+    display: block;
+    width: 100%;
+    margin: 0 0 16px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    text-align: center;
+}
+
+.management-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #244536;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Thống kê */
+
+.management-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 12px;
+    margin-bottom: 12px;
+}
+
+.stat-card {
+    min-width: 0;
+    height: 66px;
+    box-sizing: border-box;
+    padding: 12px;
+    background: #FAFAF7;
+    border: 1px solid #E5E0D6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-card p {
+    margin: 0;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+}
+
+.stat-card strong {
+    color: #244536;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Khung tìm kiếm */
+
+.management-search-box {
+    padding: 12px 10px 14px;
+    background: #FAFAF7;
+    border: 1px solid #999;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.management-search-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.management-search-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.management-search-fields input,
+.management-search-fields select {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border: 1px solid #AAA;
+    border-radius: 7px;
+    background: white;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+
+.management-search-fields input:focus,
+.management-search-fields select:focus {
+    border-color: #244536;
+}
+
+/* Nút tìm kiếm */
+
+#staff-search-btn {
+    display: block;
+    width: 156px;
+    height: 32px;
+    margin: 10px auto 0;
+    border: none;
+    border-radius: 7px;
+    background: #244536;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#staff-search-btn:hover {
+    background: #355E49;
+}
+
+/* Kết quả đặt bàn */
+
+.staff-results {
+    display: block;
+    margin: 0 3px 10px;
+}
+
+.booking-card {
+    padding: 12px 18px;
+    background: #FAFAF7;
+    border: 1px solid #E5E0D6;
+    border-radius: 10px;
+}
+
+.booking-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #C8C3B9;
+}
+
+.booking-card-header > span:first-child {
+    color: #999;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.booking-status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 9px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.confirmed {
+    background: #D8F0DF;
+    color: #23743B;
+}
+
+.using {
+    background: #F8DADA;
+    color: #B52F2F;
+}
+
+.waiting {
+    background: #FFF0BD;
+    color: #8A6800;
+}
+
+.booking-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.booking-info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 10px;
+}
+
+.booking-info-row span {
+    color: #333;
+}
+
+.booking-info-row strong {
+    color: #244536;
+    text-align: right;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+#staff-no-result {
+    display: none;
+    padding: 15px;
+    background: #FAFAF7;
+    border-radius: 8px;
+    color: #D94343;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Nút mã QR */
+
+.management-checkin {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 5px;
+}
+
+.management-checkin .checkin-link {
+    width: 117px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: #244536;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.management-checkin .checkin-link:hover {
+    background: #355E49;
+}
+
+/* Responsive */
+
+@media (max-width: 360px) {
+    .management-container {
+        width: calc(100% - 24px);
+        padding: 22px 12px 15px;
+    }
+
+    .stat-card {
+        padding: 10px;
+    }
+
+    .booking-card {
+        padding: 12px;
+    }
+}
+
+
+/* UI-07: QR Check-in */
+
+.checkin-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    box-sizing: border-box;
+    background: #FAFAF7;
+    border-radius: 12px;
+}
+
+.checkin-header {
+    margin-bottom: 30px;
+}
+
+.checkin-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: #244536;
+    margin: 0 0 10px;
+}
+
+.checkin-header p {
+    color: #777;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Khu vực quét QR */
+
+.checkin-scan-section h2,
+.checkin-info-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #244536;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.qr-scan-box {
+    background: #F1EEE5;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.scan-frame {
+    width: 230px;
+    height: 190px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #FAFAF7;
+    border-radius: 8px;
+}
+
+.scan-icon span {
+    font-size: 55px;
+    color: #244536;
+}
+
+.scan-frame p {
+    color: #777;
+    font-size: 13px;
+    margin: 0;
+}
+
+.corner {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-color: #244536;
+    border-style: solid;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+    border-width: 3px 0 0 3px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+    border-width: 3px 3px 0 0;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+    border-width: 0 0 3px 3px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+    border-width: 0 3px 3px 0;
+}
+
+.scan-description {
+    color: #777;
+    font-size: 12px;
+    margin: 15px 0 0;
+}
+
+/* Đường phân cách */
+
+.checkin-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #888;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.checkin-divider::before,
+.checkin-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #E5E0D6;
+}
+
+/* Nhập mã */
+
+.checkin-input-group {
+    display: flex;
+    gap: 12px;
+}
+
+.checkin-input-group input {
+    flex: 1;
+    min-width: 0;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 0 14px;
+    border: 1px solid #E5E0D6;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    outline: none;
+}
+
+.checkin-input-group input:focus {
+    border-color: #244536;
+}
+
+#checkin-search-btn {
+    width: 150px;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    background: #244536;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#checkin-search-btn:hover {
+    background: #355E49;
+}
+
+#checkin-message {
+    display: none;
+    color: #D94343;
+    font-size: 13px;
+    margin: 12px 0 0;
+}
+
+/* Thông tin khách hàng */
+
+.checkin-info-section {
+    display: block;
+    margin-top: 35px;
+}
+
+.checkin-info-card {
+    background: #F1EEE5;
+    border: 1px solid #E5E0D6;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.checkin-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #D8D0C2;
+    margin-bottom: 10px;
+}
+
+.checkin-info-header h3 {
+    font-family: 'Playfair Display', serif;
+    color: #244536;
+    font-size: 19px;
+    margin: 0;
+}
+
+#checkin-status {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.checkin-confirmed {
+    background: #D8F0DF;
+    color: #23743B;
+}
+
+.checkin-already {
+    background: #F8DADA;
+    color: #B52F2F;
+}
+
+.checkin-waiting {
+    background: #FFF0BD;
+    color: #8A6800;
+}
+
+.checkin-info-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkin-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #E5E0D6;
+    font-size: 14px;
+}
+
+.checkin-info-row span {
+    color: #777;
+}
+
+.checkin-info-row strong {
+    color: #333;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+#checkin-confirm-btn {
+    width: 100%;
+    height: 48px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 8px;
+    background: #244536;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#checkin-confirm-btn:hover {
+    background: #355E49;
+}
+
+#checkin-confirm-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+/* Thành công */
+
+.checkin-success {
+    display: none;
+    margin-top: 35px;
+    padding: 30px 20px;
+    background: #F1EEE5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #D8F0DF;
+    color: #23743B;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.checkin-success h2 {
+    font-family: 'Playfair Display', serif;
+    color: #244536;
+    margin-bottom: 12px;
+}
+
+.checkin-success p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.back-management-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    margin-top: 25px;
+    box-sizing: border-box;
+    background: #244536;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.checkin-back {
+    margin-top: 25px;
+}
+
+.checkin-back a {
+    color: #244536;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .checkin-container {
+        margin: 20px 12px;
+        padding: 22px 15px;
+    }
+
+    .checkin-input-group {
+        flex-direction: column;
+    }
+
+    #checkin-search-btn {
+        width: 100%;
+    }
+
+    .checkin-info-card {
+        padding: 18px 14px;
+    }
+
+    .checkin-info-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .checkin-info-row {
+        font-size: 13px;
+        gap: 10px;
+    }
+}
+
+
+
+/* UI-07: Dieu chinh bo cuc */
+
+.checkin-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 35px;
+    box-sizing: border-box;
+    background: #FAFAF7;
+    border-radius: 12px;
+}
+
+.checkin-container .checkin-header {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    margin: 0 0 30px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.checkin-container .checkin-header h1 {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #244536;
+
+    visibility: visible;
+    opacity: 1;
+}
+
+.checkin-scan-section {
+    margin-bottom: 28px;
+}
+
+.checkin-scan-section h2,
+.checkin-info-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #244536;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.qr-scan-box {
+    background: #F1EEE5;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.checkin-input-section {
+    margin-bottom: 30px;
+}
+
+.checkin-input-section label {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.checkin-info-section {
+    display: block;
+    margin-top: 30px;
+}
+
+.checkin-success-message {
+    display: none;
+    margin-top: 20px;
+    color: #23743B;
+    text-align: center;
+    font-weight: 600;
+}
+
+@media(max-width: 600px) {
+    .checkin-container {
+        margin: 20px 12px;
+        padding: 22px 15px;
+    }
+}
+
+.checkin-info-title {
+    font-family: 'Playfair Display', serif;
+    color: #244536;
+    font-size: 20px;
+    margin: 0 0 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #D8D0C2;
+}
+
+.qr-section img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    object-fit: contain;
+}
+
+/* Background riêng cho UI-06 */
+body.management-page {
+    background-color: #F1EEE5;
+}
+
+/* Khung chính */
+.management-container {
+    background-color: #FAFAF7;
+    border-radius: 12px;
+    padding: 25px 13px 16px;
+}

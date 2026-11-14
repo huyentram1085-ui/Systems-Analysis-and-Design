@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác nhận đặt bàn</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header class="booking-header">
+        <h1>Restaurant Booking</h1>
+        <p>Cảm ơn bạn đã lựa chọn nhà hàng</p>
+    </header>
+
+    <main class="confirmation-container">
+
+        <div class="confirmation-title">
+            <h2>ĐẶT BÀN THÀNH CÔNG!</h2>
+            <p>Thông tin đặt bàn của bạn đã được ghi nhận.</p>
+        </div>
+
+        <div class="confirmation-info">
+            <h3>Thông tin đặt bàn</h3>
+
+            <p>Mã đặt bàn: <span id="booking-code-info"></span></p>
+            <p>Tên khách hàng: <span id="confirm-name"></span></p>
+            <p>Ngày đặt: <span id="confirm-date"></span></p>
+            <p>Giờ đặt: <span id="confirm-time"></span></p>
+            <p>Số lượng khách: <span id="confirm-guests"></span></p>
+            <p>Mã bàn: <span id="confirm-table"></span></p>
+        </div>
+
+        <div class="qr-section">
+            <h3>Mã QR xác nhận</h3>
+            <img id="qr-image" src="" alt="QR Code">
+        </div>
+
+        <div class="confirmation-buttons">
+            <a href="my-reservation.html" class="search-btn">
+                XEM ĐẶT BÀN
+            </a>
+
+            <a href="../index.html" class="home-btn">
+                VỀ TRANG CHỦ
+            </a>
+        </div>
+
+    </main>
+
+    <script src="../js/booking.js"></script>
+
+</body>
+</html>
