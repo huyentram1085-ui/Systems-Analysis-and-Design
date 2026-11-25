@@ -1,119 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Check-in</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quét mã QR</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-    
-<main class="checkin-container">
-
-    <header class="checkin-header">
-        <h1>QUÉT MÃ QR CHECK-IN</h1>
-    </header>
-
-    <!-- Khu vực quét mã QR -->
-    <section class="checkin-scan-section">
-
-        <h2>Khu vực quét mã QR</h2>
-
-        <div class="qr-scan-box">
-            <div class="scan-frame">
-                <span class="corner top-left"></span>
-                <span class="corner top-right"></span>
-                <span class="corner bottom-left"></span>
-                <span class="corner bottom-right"></span>
-
-                <div class="scan-icon">
-                    <span>▦</span>
-                </div>
-
-                <p>Khu vực quét mã QR</p>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Nhập mã đặt bàn -->
-    <section class="checkin-input-section">
-
-        <label for="checkin-code">Nhập mã đặt bàn</label>
-
-        <div class="checkin-input-group">
-            <input
-                type="text"
-                id="checkin-code"
-                placeholder="Nhập mã đặt bàn..."
-            >
-
-            <button type="button" id="checkin-search-btn">
-                KIỂM TRA MÃ
-            </button>
-        </div>
-
-        <p id="checkin-message"></p>
-
-    </section>
-
-    <!-- Thông tin đặt bàn -->
-    <section class="checkin-info-section" id="checkin-info-section">
-
-        <div class="checkin-info-card">
-
-            <h2 class="checkin-info-title">Thông tin đặt bàn</h2>
-
-            <div class="checkin-info-header">
-                <h3 id="checkin-name"></h3>
-                <span id="checkin-status"></span>
-            </div>
-
-            <div class="checkin-info-body">
-
-                <div class="checkin-info-row">
-                    <span>Mã đặt bàn</span>
-                    <strong id="checkin-result-code"></strong>
-                </div>
-
-                <div class="checkin-info-row">
-                    <span>Số điện thoại</span>
-                    <strong id="checkin-phone"></strong>
-                </div>
-
-                <div class="checkin-info-row">
-                    <span>Email</span>
-                    <strong id="checkin-email"></strong>
-                </div>
-
-                <div class="checkin-info-row">
-                    <span>Bàn đã đặt</span>
-                    <strong id="checkin-table"></strong>
-                </div>
-
-                <div class="checkin-info-row">
-                    <span>Số lượng khách</span>
-                    <strong id="checkin-guests"></strong>
-                </div>
-
-                <div class="checkin-info-row">
-                    <span>Thời gian</span>
-                    <strong id="checkin-time"></strong>
-                </div>
-
-            </div>
-
-            <button type="button" id="checkin-confirm-btn">
-                XÁC NHẬN CHECK-IN
-            </button>
-
-        </div>
-
-    </section>
-
-    <p id="checkin-success-message" class="checkin-success-message">
-        Check-in thành công!
-    </p>
-
-</main>
+  <div id="app"></div>
+  <script src="../js/app.js"></script>
+</body>
+</html>

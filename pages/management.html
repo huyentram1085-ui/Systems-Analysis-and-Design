@@ -1,133 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý đặt bàn</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý đặt bàn</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-    <main class="management-container">
-
-        <!-- Header -->
-        <header class="management-header">
-            <h1>QUẢN LÝ ĐẶT BÀN</h1>
-        </header>
-
-        <!-- Thống kê -->
-        <section class="management-stats">
-
-            <div class="stat-card">
-                <p>Tổng đặt bàn</p>
-                <strong>24</strong>
-            </div>
-
-            <div class="stat-card">
-                <p>Đã xác nhận</p>
-                <strong>10</strong>
-            </div>
-
-            <div class="stat-card">
-                <p>Đang sử dụng</p>
-                <strong>08</strong>
-            </div>
-
-            <div class="stat-card">
-                <p>Đang chờ</p>
-                <strong>06</strong>
-            </div>
-
-        </section>
-
-        <!-- Tìm kiếm -->
-        <section class="management-search-box">
-
-            <h2>TÌM KIẾM ĐẶT BÀN</h2>
-
-            <div class="management-search-fields">
-
-                <input
-                    type="text"
-                    id="staff-search"
-                    placeholder="Mã đặt bàn hoặc tên khách hàng"
-                >
-
-                <input
-                    type="text"
-                    id="staff-phone"
-                    placeholder="Số điện thoại"
-                >
-
-                <select id="staff-status">
-                    <option value="">Tất cả trạng thái</option>
-                    <option value="Đã xác nhận">Đã xác nhận</option>
-                    <option value="Đang sử dụng">Đang sử dụng</option>
-                    <option value="Đang chờ">Đang chờ</option>
-                </select>
-
-            </div>
-
-            <button type="button" id="staff-search-btn">
-                TÌM KIẾM
-            </button>
-
-        </section>
-
-        <!-- Kết quả tìm kiếm -->
-        <section class="staff-results" id="staff-results">
-
-            <div class="booking-card" id="staff-booking-card">
-
-                <div class="booking-card-header">
-                    <span id="result-code">RSV001</span>
-                    <span class="booking-status confirmed" id="result-status">
-                        ĐÃ XÁC NHẬN
-                    </span>
-                </div>
-
-                <div class="booking-card-body">
-
-                    <div class="booking-info-row">
-                        <span>Khách hàng</span>
-                        <strong id="result-name">Nguyễn Văn A</strong>
-                    </div>
-
-                    <div class="booking-info-row">
-                        <span>Thời gian</span>
-                        <strong id="result-time">18:00 - 05/11/2026</strong>
-                    </div>
-
-                    <div class="booking-info-row">
-                        <span>Số khách</span>
-                        <strong id="result-guests">4 người</strong>
-                    </div>
-
-                    <div class="booking-info-row">
-                        <span>Mã bàn</span>
-                        <strong id="result-table">T04</strong>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <p id="staff-no-result">
-                Không tìm thấy đặt bàn phù hợp.
-            </p>
-
-        </section>
-
-        <!-- Nút QR -->
-        <div class="management-checkin">
-            <a href="checkin.html" class="checkin-link">
-                MÃ QR
-            </a>
-        </div>
-
-    </main>
-
-    <script src="../js/booking.js"></script>
-
+  <div id="app"></div>
+  <script src="../js/app.js"></script>
 </body>
 </html>

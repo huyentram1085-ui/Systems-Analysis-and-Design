@@ -1,68 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin đặt bàn</title>
-
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông tin đặt bàn</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-
-    <header class="booking-header">
-        <h1>Restaurant Booking</h1>
-        <p>Hoàn tất thông tin đặt bàn của bạn</p>
-    </header>
-
-    <main class="reservation-container">
-
-        <div class="reservation-title">
-            <h2>THÔNG TIN ĐẶT BÀN</h2>
-            <p>Vui lòng điền đầy đủ thông tin bên dưới</p>
-        </div>
-
-        <div class="table-detail">
-            <h3>Bàn đã chọn</h3>
-            <p id="selected-table">Đang tải thông tin bàn...</p>
-        </div>
-
-        <form id="reservation-form">
-
-            <div class="form-group">
-                <label for="customer-name">Họ và tên</label>
-                <input type="text" id="customer-name"
-                    placeholder="Nhập họ và tên" required>
-            </div>
-
-            <div class="form-group">
-                <label for="customer-phone">Số điện thoại</label>
-                <input type="tel" id="customer-phone"
-                    placeholder="Nhập số điện thoại" required>
-            </div>
-
-            <div class="form-group">
-                <label for="customer-email">Email</label>
-                <input type="email" id="customer-email"
-                    placeholder="Nhập email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="special-note">Yêu cầu đặc biệt</label>
-                <textarea id="special-note"
-                    placeholder="Ví dụ: Trang trí sinh nhật, ghế trẻ em..."
-                    rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="search-btn">
-                XÁC NHẬN ĐẶT BÀN
-            </button>
-
-        </form>
-
-    </main>
-
-    <script src="../js/booking.js"></script>
-
+  <div id="app"></div>
+  <script src="../js/app.js"></script>
 </body>
 </html>

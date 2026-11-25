@@ -1,97 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sơ đồ bàn - Restaurant Booking</title>
-
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sơ đồ bàn</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-
 <body>
-
-    <header class="booking-header">
-        <h1>Restaurant Booking</h1>
-        <p>Chọn bàn phù hợp với bạn</p>
-    </header>
-
-    <main class="map-container">
-
-        <div class="map-title">
-            <h2>SƠ ĐỒ BÀN</h2>
-            <p>Vui lòng chọn một bàn còn trống</p>
-        </div>
-
-        <!-- Chu thich trang thai -->
-        <div class="table-legend">
-            <span><i class="green"></i> Còn trống</span>
-            <span><i class="yellow"></i> Đang giữ</span>
-            <span><i class="red"></i> Đã có khách</span>
-        </div>
-
-        <!-- Danh sach ban -->
-        <div class="table-list">
-
-            <button class="table available" data-name="T01" data-seat="2" data-area="Trong nhà">
-                T01
-            </button>
-
-            <button class="table available" data-name="T02" data-seat="2" data-area="Trong nhà">
-                T02 
-            </button>
-
-            <button class="table reserved" disabled>
-                T03 
-            </button>
-
-            <button class="table available" data-name="T04" data-seat="4" data-area="Trong nhà">
-                T04 
-            </button>
-
-            <button class="table occupied" disabled>
-                T05 
-            </button>
-
-            <button class="table available" data-name="T06" data-seat="4" data-area="Trong nhà">
-                T06 
-            </button>
-
-            <button class="table occupied" disabled>
-                T07 
-            </button>
-
-            <button class="table available" data-name="T08" data-seat="6" data-area="Trong nhà">
-                T08 
-            </button>
-
-            <button class="table reserved" disabled>
-                T09
-            </button>
-
-        </div>
-
-        <!-- Thong tin ban duoc chon -->
-        <div class="selected-table">
-            <h3>Thông tin bàn</h3>
-
-            <div class="table-detail">
-                <p><strong>Mã bàn:</strong> <span id="info-name">---</span></p>
-                <p><strong>Sức chứa:</strong> <span id="info-seat">---</span></p>
-                <p><strong>Khu vực:</strong> <span id="info-area">---</span></p>
-                <p>
-                    <strong>Trạng thái:</strong>
-                    <span id="info-status" class="table-status">Chưa chọn</span>
-                </p>
-            </div>
-
-            <p id="table-info"></p>
-
-        </div>
-        
-        <button id="continue-btn">TIẾP TỤC</button>
-    </main>
-
-    <script src="../js/booking.js"></script>
-
+  <div id="app"></div>
+  <script src="../js/app.js"></script>
 </body>
 </html>
